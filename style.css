@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+    /*Primary Color */
+    --gradient: (to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%))
+
+    /* Neutral Colors */
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+    --font-family: 'Raleway', sans-serif;
+}
+
+*{
+    margin: 0px;
+    font-family: var(--font-family);
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+/* Body setup */
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/bg-desktop.png'); 
+    background-repeat: no-repeat;
+    background-color: var(--very-dark-blue);
+    background-position: bottom;
+    background-size: 100%;
+  }
+
+  /* Primary container */
+  .pagesize-container {
+    max-width: 1440px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: auto;   
+  }
+
+  /* Secondary container */
+  .main-container {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 30px;
+    width: 75vw;
+    height: 200px;
+    margin: 100px;
+  }
+
+  /* Logos container */
+  .logos-container {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 350px;
+    background-color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+    border-radius: 8px 100px 8px 8px;
+    padding: 40px;
+    align-self: flex-end;
+  }
+
+  /* Company logo */
+  .fylo-logo {
+    padding-bottom: 25px;
+    width: 140px;
+    height: 100px;
+  }
+
+  /* Other logos container */
+  .logos-cards {
+    display: flex;
+    flex: 1;
+  }
+
+  /* Logos setting */
+    .logo-div {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        background-color: var(--very-dark-blue);
+        border: 1px solid var(--very-dark-blue);
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 12px;
+    }
+
+    /* Primary slider container */
+  .quota-container {
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    width: 580px;
+    background-color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+    border-radius:8px;
+    padding: 40px;
+    align-self: flex-end;
+  }
+
+  /* Slider container */
+  .slider-container {
+    width: 100%;
+    background-color: hsl(229, 54%, 18%);
+    margin-top: 15px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+  }
+
+  /* Quota slider setup */
+  .quota-slider {
+    -webkit-appearance: none;
+    width: 73%;
+    margin: 3px;
+    height: 15px;
+    border: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+     background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    outline: none;
+    border-radius: 50px;
+  }
+
+  /* Quota slider indicator */
+  .quota-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #ffff;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+h1 {
+    font-family: var(--font-family);
+    color: #fff;
+    font-weight: 400;
+  }
+
+  /* Quota usage container */
+.quota-usage {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-family);
+    color: #fff; 
+    font-size: 12px;
+}
+
+  /* Floating usage indicator */
+.quota-space-left {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    font-family: var(--font-family);
+    background-color: #fff;
+    color: black;
+    width: 200px;
+    height: 80px;
+    border-radius: 10px 10px 0 10px;
+    padding: 1rem 0 1rem 1rem;
+    z-index: 0;
+    left: 300px;
+    bottom: 160px;
+    text-align: center;
+    align-items: center;
+}
+
+/* Floating usage indicator's bottom angle */
+.quota-space-left::after {
+    content: '';
+    height: 0;
+    width: 0;
+    color: #ffffff;
+    margin-bottom: -100px;
+    margin-right: -6px;
+    border-top: 25px solid #ffffff;
+    border-left: 25px solid var(--dark-blue);
+}
+
+.num-quota {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.space-quota {
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: gray;
+}
+
+
+/* Media scree settings */
+
+@media screen and (max-width:760px) {
+
+    body{
+        background-image: url('./images/bg-mobile.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .pagesize-container {
+        display: flex;
+        flex-direction: column;
+        width: 85vw;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        width: 85vw;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logos-container {
+        width: 85vw; 
+}
+
+    .quota-container {
+        max-height: 300px;    
+        width: 85vw;
+}
+    .quota-space-left {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        width: 180px;
+        height: 70px;
+        left: 25px;
+        bottom: -15px;
+        border-radius: 9px;
+}
+
+    .quota-space-left::after {
+        content: none; 
+}
+
+    .space-quota {
+        padding-right: 25px;
+}
+
+}
